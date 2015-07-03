@@ -1,4 +1,4 @@
-class ::deployments::control {
+class deployments::control {
     class { '::keystone':
         admin_token     => 'super_secret',
         package_ensure  => 'latest',
