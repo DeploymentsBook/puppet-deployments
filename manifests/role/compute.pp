@@ -2,4 +2,4 @@ class deployments::role::compute {
     include ::nova
 }
 
-include ::deployments::role::compute
+include deployments::role::compute
