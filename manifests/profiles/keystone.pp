@@ -1,6 +1,7 @@
-class deployments::control {
+class deployments::profile::keystone {
     include ::keystone
     include ::keystone::roles::admin
+    include ::keystone::endpoint
 
     $keystone_deps = ['python-pbr', 'python-tz']
     package { $keystone_deps:
@@ -8,5 +9,3 @@ class deployments::control {
         before => Service['keystone']
     }
 }
-
-include ::deployments::control
