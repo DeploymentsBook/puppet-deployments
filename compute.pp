@@ -1,5 +1,5 @@
-class compute {
+class deployments::compute {
     include ::nova
 }
 
-include ::compute
+include ::deployments::compute
