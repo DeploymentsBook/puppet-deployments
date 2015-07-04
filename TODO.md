@@ -1,12 +1,11 @@
 To Do
-- cinder
 - nova api
 - compute
   - nova compute
+  - kvm and friends
 - neutron
 - networks setup?
 - usability
-  - openrc
   - default user besides admin
   - default project to play in
 - debugability
