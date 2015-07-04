@@ -3,7 +3,7 @@ class deployments::role::control {
   include deployments::profile::glance
   include deployments::profile::keystone
   include deployments::profile::rabbitmq
-  include deployments::profile::uca
+  include deployments::profile::base
 }
 
 include deployments::role::control

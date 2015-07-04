@@ -1,4 +1,4 @@
-class deployments::profile::rabbit
+class deployments::profile::rabbitmq
 {
   include ::rabbitmq
 }
