@@ -1,5 +1,5 @@
 name    'puppet-deployments'
-version '0.1.0'
+version '0.1.1'
 source 'UNKNOWN'
 author 'Matt Fischer'
 license 'Apache License, Version 2.0'
