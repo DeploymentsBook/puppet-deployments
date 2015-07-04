@@ -1,0 +1,14 @@
+To Do
+- cinder
+- nova api
+- compute
+  - nova compute
+- neutron
+- networks setup?
+- usability
+  - openrc
+  - default user besides admin
+  - default project to play in
+- debugability
+  - .my.cnf in /root for mysql?
+  - simple openstack smoke test script
