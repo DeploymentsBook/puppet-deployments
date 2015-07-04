@@ -1,5 +1,6 @@
 class deployments::role::compute {
-  include ::nova
+  include deployments::profile::compute
+  include deployments::profile::uca
 }
 
 include deployments::role::compute
