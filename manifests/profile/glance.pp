@@ -6,8 +6,6 @@ class deployments::profile::glance(
   include ::glance::registry
   include ::glance::keystone::auth
   include ::glance::backend::file
-
-  include ::mysql::server
   include ::glance::db::mysql
 
   glance_image { 'cirros':

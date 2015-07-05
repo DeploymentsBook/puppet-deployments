@@ -10,8 +10,5 @@ class deployments::profile::nova
   include ::nova::conductor
   include ::nova::vncproxy
   include ::nova::keystone::auth
-
-  include ::mysql::server
   include ::nova::db::mysql
-
 }

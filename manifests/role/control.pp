@@ -6,6 +6,7 @@ class deployments::role::control {
   include deployments::profile::nova
   include deployments::profile::rabbitmq
   include deployments::profile::users
+  include ::mysql::server
 }
 
 include deployments::role::control
