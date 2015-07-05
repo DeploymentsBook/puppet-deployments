@@ -1,9 +1,10 @@
 To Do
+- rabbit auth not working...
 - hiera sanity & cleanup
   - re-organize
   - move user-changable stuff into new file
 - compute
-  - nova compute
+  - nova compute puppet warnings
   - kvm and friends
 - neutron
 - networks setup?
