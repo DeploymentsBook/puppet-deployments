@@ -1,4 +1,7 @@
 To Do
+- hiera sanity & cleanup
+  - re-organize
+  - move user-changable stuff into new file
 - nova api
 - compute
   - nova compute
