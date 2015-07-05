@@ -2,15 +2,13 @@ To Do
 - hiera sanity & cleanup
   - re-organize
   - move user-changable stuff into new file
-- nova api
 - compute
   - nova compute
   - kvm and friends
 - neutron
 - networks setup?
 - usability
-  - default user besides admin
-  - default project to play in
+  - openrc for test user
 - debugability
   - .my.cnf in /root for mysql?
   - simple openstack smoke test script
