@@ -9,7 +9,7 @@ class deployments::profile::uca (
     ensure       => $ensure,
     location     => "http://ubuntu-cloud.archive.canonical.com/ubuntu/${version}",
     release      => $release,
-    include_src  => false,
+    include      => { 'src' => false },
     architecture => $::architecture,
     key          => '391A9AA2147192839E9DB0315EDB1B62EC4926EA',
     notify       => Class['Apt::Update'],
