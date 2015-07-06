@@ -1,8 +1,8 @@
 # creates users/roles/tenant for a normal user
 class deployments::profile::users(
-  $project  = "test_project",
-  $username = "test",
-  $password = "test",
+  $project,
+  $username,
+  $password,
 ) {
 
   keystone_tenant { $project:

@@ -1,15 +1,12 @@
 To Do
-- rabbit auth not working...
 - hiera sanity & cleanup
   - re-organize
   - move user-changable stuff into new file
 - compute
   - nova compute puppet warnings
-  - kvm and friends
+  - try to actually schedule an instance
 - neutron
 - networks setup?
-- usability
-  - openrc for test user
 - debugability
   - .my.cnf in /root for mysql?
   - simple openstack smoke test script
