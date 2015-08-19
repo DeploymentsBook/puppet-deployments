@@ -5,6 +5,7 @@ To Do
 - compute
   - nova compute puppet warnings
   - try to actually schedule an instance
+- horizon
 - neutron
 - networks setup?
 - debugability
