@@ -3,7 +3,6 @@ To Do
   - re-organize
   - move user-changable stuff into new file
 - compute
-  - nova compute puppet warnings
   - try to actually schedule an instance
 - horizon
 - neutron
