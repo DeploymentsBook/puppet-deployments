@@ -12,4 +12,10 @@ class deployments::profile::nova
   include ::nova::scheduler
   include ::nova::scheduler::filter
   include ::nova::vncproxy
+
+  $nova_deps = ['websockify']
+  package { $nova_deps:
+    ensure => 'latest',
+    before => Service['nova-novncproxy']
+  }
 }
