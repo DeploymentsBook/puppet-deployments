@@ -7,6 +7,6 @@ class deployments::profile::keystone {
   $keystone_deps = ['python-pbr', 'python-tz']
   package { $keystone_deps:
     ensure => 'latest',
-    before => Service['keystone']
+    before => [Service['keystone'], Package['python-openstackclient']],
   }
 }
