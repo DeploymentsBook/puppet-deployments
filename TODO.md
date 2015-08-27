@@ -2,6 +2,7 @@ To Do
 - compute
   - try to actually schedule an instance
   - rabbit seems to be broken blocking instance scheduling
+- cinder volumes not working
 - neutron
 - work on scenarios
 - debugability
