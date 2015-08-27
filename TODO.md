@@ -2,9 +2,12 @@ To Do
 - compute
   - try to actually schedule an instance
   - rabbit seems to be broken blocking instance scheduling
-- cinder volumes not working
 - neutron
 - work on scenarios
+- warnings
+  - keystone: ignore_default_tenant and tenant deprecated
+  - rabbit apt source missing 0x (proposed fix upstream)
+  - keystone admin password issue
 - debugability
   - simple openstack smoke test script
 - hiera sanity & cleanup
