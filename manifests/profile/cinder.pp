@@ -6,4 +6,5 @@ class deployments::profile::cinder
   include ::cinder::db::mysql
   include ::cinder::keystone::auth
   include ::cinder::volume
+  include ::cinder::setup_test_volume
 }
