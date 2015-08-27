@@ -2,8 +2,6 @@ To Do
 - compute
   - try to actually schedule an instance
   - rabbit seems to be broken blocking instance scheduling
-  - rabbit adminc console enable?
-- horizon login not working
 - neutron
 - work on scenarios
 - debugability
