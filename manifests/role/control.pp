@@ -5,6 +5,7 @@ class deployments::role::control {
   include deployments::profile::horizon
   include deployments::profile::keystone
   include deployments::profile::nova
+  include deployments::profile::neutron
   include deployments::profile::rabbitmq
   include deployments::profile::users
   include ::mysql::server
