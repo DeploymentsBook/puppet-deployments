@@ -1,8 +1,8 @@
 To Do
-- admin user broken wrt puppet since kilo changes
 - compute
   - try to actually schedule an instance
 - neutron
+- work on scenarios
 - debugability
   - simple openstack smoke test script
 - hiera sanity & cleanup
