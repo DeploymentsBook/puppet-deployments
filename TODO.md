@@ -5,11 +5,13 @@ To Do
 - neutron
 - work on scenarios
 - warnings
-  - keystone: ignore_default_tenant and tenant deprecated
+  - keystone: ignore_default_tenant and tenant deprecated: WNF
   - rabbit apt source missing 0x (proposed fix upstream)
   - keystone admin password issue
 - debugability
   - simple openstack smoke test script
+  - note rabbit console
+  - check whether ovs is working and bounce it if needed
 - hiera sanity & cleanup
   - re-organize
   - move user-changable stuff into new file
