@@ -1,6 +1,8 @@
 class deployments::profile::keystone {
   include ::apache
   include ::keystone
+  include ::keystone::client
+  include ::keystone::cron::token_flush
   include ::keystone::roles::admin
   include ::keystone::endpoint
   include ::keystone::db::mysql
