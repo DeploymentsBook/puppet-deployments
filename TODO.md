@@ -3,15 +3,15 @@ To Do
   - try to actually schedule an instance
   - rabbit seems to be broken blocking instance scheduling
 - neutron
+  - ovs seems to be unhappy if it cannot lookup the hostname
 - work on scenarios
 - warnings
   - keystone: ignore_default_tenant and tenant deprecated: WNF
   - rabbit apt source missing 0x (proposed fix upstream)
-  - keystone admin password issue
+  - keystone admin password issue: seems to happen when openrc sourced
 - debugability
   - simple openstack smoke test script
   - note rabbit console
-  - check whether ovs is working and bounce it if needed
 - hiera sanity & cleanup
   - re-organize
   - move user-changable stuff into new file
