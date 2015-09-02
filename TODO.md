@@ -4,6 +4,7 @@ To Do
   - rabbit seems to be broken blocking instance scheduling
 - neutron
   - ovs seems to be unhappy if it cannot lookup the hostname
+  - create default network and subnet
 - work on scenarios
 - warnings
   - keystone: ignore_default_tenant and tenant deprecated: WNF
