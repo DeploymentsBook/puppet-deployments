@@ -4,7 +4,10 @@ To Do
   - rabbit seems to be broken blocking instance scheduling
 - neutron
   - ovs seems to be unhappy if it cannot lookup the hostname
+    - need to puppetize this fix
   - create default network and subnet
+- horizon
+  - icons not loading, see: LP: #1481538
 - work on scenarios
 - warnings
   - keystone: ignore_default_tenant and tenant deprecated: WNF
