@@ -4,6 +4,7 @@ class deployments::profile::neutron
   include ::neutron::client
   include ::neutron::server
   include ::neutron::db::mysql
+  include ::neutron::keystone::auth
   include ::neutron::plugins::ml2
   include ::neutron::agents::ml2::ovs
   include ::neutron::agents::l3
