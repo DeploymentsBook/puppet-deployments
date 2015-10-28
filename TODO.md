@@ -14,7 +14,6 @@ To Do
   - rabbit apt source missing 0x (proposed fix upstream)
   - keystone admin password issue: seems to happen when openrc sourced
 - debugability
-  - simple openstack smoke test script
   - note rabbit console
 - hiera sanity & cleanup
   - re-organize
