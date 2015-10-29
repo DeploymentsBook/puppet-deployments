@@ -5,7 +5,6 @@ To Do
 - neutron
   - ovs seems to be unhappy if it cannot lookup the hostname
     - need to puppetize this fix
-  - create default network and subnet
 - horizon
   - icons not loading, see: LP: #1481538
 - work on scenarios
