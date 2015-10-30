@@ -2,12 +2,11 @@ To Do
 - compute
   - try to actually schedule an instance
   - rabbit seems to be broken blocking instance scheduling
-- neutron
-  - ovs seems to be unhappy if it cannot lookup the hostname
-    - need to puppetize this fix
 - horizon
   - icons not loading, see: LP: #1481538
+    - fixed in Liberty
 - work on scenarios
+  - swift + keystone
 - warnings
   - keystone: ignore_default_tenant and tenant deprecated: WNF
   - rabbit apt source missing 0x (proposed fix upstream)
