@@ -24,8 +24,6 @@ class deployments::profile::swift
   swift::storage::filter::recon { $swift_components : }
   swift::storage::filter::healthcheck { $swift_components : }
 
-  # XXX what creates the loopbacks?
-
   file { '/srv/node':
     ensure  => directory,
     owner   => 'swift',
@@ -33,18 +31,17 @@ class deployments::profile::swift
     require => Package['swift'],
   }
 
-  # move to hiera?
-  # XXX add more than one
-  ring_object_device { '127.0.0.1:6000/1':
-    zone   => 1,
-    weight => 1,
+  $object_devices = hiera('swift_ring_object_devices', {})
+  if ! empty($object_devices) {
+    create_resources('ring_object_device', $object_devices)
   }
-  ring_container_device { '127.0.0.1:6001/1':
-    zone   => 1,
-    weight => 1,
+  $container_devices = hiera('swift_ring_container_devices', {})
+  if ! empty($container_devices) {
+    create_resources('ring_container_device', $container_devices)
   }
-  ring_account_device { '127.0.0.1:6002/1':
-    zone   => 1,
-    weight => 1,
+  $account_devices = hiera('swift_ring_account_devices', {})
+  if ! empty($account_devices) {
+    create_resources('ring_account_device', $account_devices)
   }
+
 }
