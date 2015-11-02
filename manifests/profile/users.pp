@@ -3,7 +3,12 @@ class deployments::profile::users(
   $project,
   $username,
   $password,
+  $roles,
 ) {
+
+  keystone_role { $roles:
+    ensure => present,
+  }
 
   keystone_tenant { $project:
     ensure      => present,
@@ -21,6 +26,6 @@ class deployments::profile::users(
 
   keystone_user_role { "${username}@${project}":
     ensure => present,
-    roles  => ['_member_'],
+    roles  => $roles,
   }
 }

@@ -8,7 +8,6 @@ class deployments::role::control {
   include deployments::profile::nova
   include deployments::profile::neutron
   include deployments::profile::rabbitmq
-  include deployments::profile::users
   include ::mysql::server
 }
 
