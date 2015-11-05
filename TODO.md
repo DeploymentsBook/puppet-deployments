@@ -2,6 +2,7 @@ To Do
 - compute
   - try to actually schedule an instance
   - rabbit seems to be broken blocking instance scheduling
+- switch keystone to v3?
 - horizon
   - icons not loading, see: LP: #1481538
     - fixed in Liberty
