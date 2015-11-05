@@ -4,18 +4,18 @@ class deployments::profile::swift
   include ::swift
   include ::swift::keystone::auth
   include ::swift::proxy
-  include ::swift::proxy::catch_errors
-  include ::swift::proxy::healthcheck
-  include ::swift::proxy::proxy_logging
-  include ::swift::proxy::cache
-  include ::swift::proxy::tempurl
-  include ::swift::proxy::ratelimit
-  include ::swift::proxy::authtoken
-  include ::swift::proxy::keystone
-  include ::swift::proxy::formpost
-  include ::swift::proxy::staticweb
-  include ::swift::proxy::container_quotas
   include ::swift::proxy::account_quotas
+  include ::swift::proxy::authtoken
+  include ::swift::proxy::cache
+  include ::swift::proxy::catch_errors
+  include ::swift::proxy::container_quotas
+  include ::swift::proxy::formpost
+  include ::swift::proxy::healthcheck
+  include ::swift::proxy::keystone
+  include ::swift::proxy::proxy_logging
+  include ::swift::proxy::ratelimit
+  include ::swift::proxy::staticweb
+  include ::swift::proxy::tempurl
   include ::swift::proxy::tempauth
   include ::swift::ringbuilder
   include ::swift::storage::all
