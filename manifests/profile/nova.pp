@@ -2,7 +2,6 @@ class deployments::profile::nova
 {
   include ::nova
   include ::nova::api
-  include ::nova::cert
   include ::nova::db::mysql
   include ::nova::conductor
   include ::nova::consoleauth
