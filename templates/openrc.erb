@@ -1,6 +1,6 @@
 export OS_TENANT_NAME='<%= @tenant %>'
 export OS_USERNAME='<%= @user %>'
 export OS_PASSWORD='<%= @password.gsub(/'/){ %q(\') } %>'
-export OS_AUTH_URL='http://<%= scope.function_hiera(['control_node'])%>:5000/v2.0/'
+export OS_AUTH_URL='http://<%= scope.function_hiera(['control_node'])%>:5000/v3'
 export OS_AUTH_STRATEGY='keystone'
 export OS_REGION_NAME='<%= scope.function_hiera(['region_name']) %>'
