@@ -4,3 +4,4 @@ export OS_PASSWORD='<%= @password.gsub(/'/){ %q(\') } %>'
 export OS_AUTH_URL='http://<%= scope.function_hiera(['control_node'])%>:5000/v3'
 export OS_AUTH_STRATEGY='keystone'
 export OS_REGION_NAME='<%= scope.function_hiera(['region_name']) %>'
+export OS_IDENTITY_API_VERSION=3
