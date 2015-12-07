@@ -1,6 +1,6 @@
 # Ubuntu Cloud Archive
 class deployments::profile::uca (
-  $release = 'kilo',
+  $release = 'liberty',
 ) {
   include ::apt
 

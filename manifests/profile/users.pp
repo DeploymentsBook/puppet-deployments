@@ -21,7 +21,6 @@ class deployments::profile::users(
     enabled  => true,
     email    => "root@localhost",
     password => $password,
-    tenant   => $project,
   }
 
   keystone_user_role { "${username}@${project}":
