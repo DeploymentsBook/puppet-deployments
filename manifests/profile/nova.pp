@@ -7,7 +7,6 @@ class deployments::profile::nova
   include ::nova::consoleauth
   include ::nova::keystone::auth
   include ::nova::network::neutron
-  include ::nova::objectstore
   include ::nova::rabbitmq
   include ::nova::scheduler
   include ::nova::scheduler::filter
