@@ -1,10 +1,7 @@
-class deployments::role::control {
+class deployments::role::foundations {
   include deployments::profile::base
-  include deployments::profile::cinder
-  include deployments::profile::ceilometer
   include deployments::profile::glance
   include deployments::profile::horizon
-  include deployments::profile::ironic
   include deployments::profile::keystone
   include deployments::profile::nova
   include deployments::profile::neutron
@@ -12,4 +9,4 @@ class deployments::role::control {
   include ::mysql::server
 }
 
-include deployments::role::control
+include deployments::role::foundations
