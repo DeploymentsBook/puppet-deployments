@@ -1,7 +1,9 @@
 class deployments::role::singlenode {
-  include deployments::role::foundations
+  include deployments::role::foundations_bare_metal
+  include deployments::role::foundations_block_storage
   include deployments::role::foundations_compute
-  include deployments::profile::swift
+  include deployments::role::foundations_object_storage
+  include deployments::role::foundations_public_cloud
 }
 
 include deployments::role::singlenode
