@@ -1,7 +1,7 @@
 class deployments::role::singlenode {
-  include deployments::role::compute
-  include deployments::role::compute
-  include deployments::role::swift
+  include deployments::role::foundations
+  include deployments::role::foundations_compute
+  include deployments::profile::swift
 }
 
 include deployments::role::singlenode
