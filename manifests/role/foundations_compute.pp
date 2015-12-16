@@ -3,4 +3,4 @@ class deployments::role::foundations_compute {
   include deployments::profile::compute
 }
 
-include deployments::role::foudations_compute
+include deployments::role::foundations_compute
