@@ -1,16 +1,7 @@
-deployments
+Common OpenStack Deployments book deployments module
 
-This is the deployments module.
+This module is to be used in collaboration with puppet-data used to configure 
+your environment and the in book exercises.
 
-License
--------
-
-
-Contact
--------
-
-
-Support
--------
-
-Please log tickets and issues at our [Projects site](http://projects.example.com)
+Learn more about "Common OpenStack Deployments: Real World Examples for Systems
+Administrators and Engineers" at http://deploymentsbook.com/
