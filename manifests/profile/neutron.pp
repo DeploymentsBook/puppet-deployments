@@ -26,4 +26,9 @@ class deployments::profile::neutron
   if $router_hash {
     create_resources('neutron_router', $router_hash)
   }
+
+  $router_interface_hash = hiera_hash('neutron_router_interface', false)
+  if $router_interface_hash {
+    create_resources('neutron_router_interface', $router_interface_hash)
+  }
 }
