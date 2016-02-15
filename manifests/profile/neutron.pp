@@ -21,4 +21,9 @@ class deployments::profile::neutron
   if $subnet_hash {
     create_resources('neutron_subnet', $subnet_hash)
   }
+
+  $router_hash = hiera_hash('neutron_router', false)
+  if $router_hash {
+    create_resources('neutron_router', $router_hash)
+  }
 }
