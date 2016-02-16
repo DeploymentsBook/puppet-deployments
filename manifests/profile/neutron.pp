@@ -18,7 +18,7 @@ class deployments::profile::neutron(
     command     => "ip link set ${extnet_device} up",
     path        => '/sbin',
     user        => 'root',
-    refreshonly => 'true',
+    refreshonly => true,
   }
 
   Neutron::Plugins::Ovs::Bridge<| |> ~> Exec["${extnet_device} up"]

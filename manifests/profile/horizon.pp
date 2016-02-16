@@ -1,4 +1,4 @@
-class deployments::profile::horizon 
+class deployments::profile::horizon
 {
   include ::apache
   include ::horizon
