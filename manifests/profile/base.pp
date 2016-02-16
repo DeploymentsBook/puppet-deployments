@@ -5,7 +5,7 @@ class deployments::profile::base {
   include ::openstacklib::openstackclient
 
   # add an alias to /etc/hosts to ensure sudo works
-  host { $hostname:
-    ip => $ipaddress,
+  host { $::hostname:
+    ip => $::ipaddress,
   }
 }
