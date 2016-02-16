@@ -1,4 +1,6 @@
-class deployments::profile::neutron
+class deployments::profile::neutron(
+  $extnet_device = 'eth1',
+)
 {
   include ::neutron
   include ::neutron::client
@@ -11,6 +13,15 @@ class deployments::profile::neutron
   include ::neutron::agents::l3
   include ::neutron::agents::dhcp
   include ::neutron::server::notifications
+
+  exec { "${extnet_device} up":
+    command     => "ip link set ${extnet_device} up",
+    path        => '/sbin',
+    user        => 'root',
+    refreshonly => 'true',
+  }
+
+  Neutron::Plugins::Ovs::Bridge<| |> ~> Exec["${extnet_device} up"]
 
   $network_hash = hiera_hash('neutron_network', false)
   if $network_hash {
