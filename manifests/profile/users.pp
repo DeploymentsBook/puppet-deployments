@@ -13,13 +13,13 @@ class deployments::profile::users(
   keystone_tenant { $project:
     ensure      => present,
     enabled     => true,
-    description => "OpenStack Deployments Book Test Project",
+    description => 'OpenStack Deployments Book Test Project',
   }
 
   keystone_user { $username:
     ensure   => 'present',
     enabled  => true,
-    email    => "root@localhost",
+    email    => 'root@localhost',
     password => $password,
   }
 

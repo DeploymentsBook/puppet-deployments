@@ -5,7 +5,7 @@ class deployments::profile::uca (
   include ::apt
 
   class { '::openstack_extras::repo::debian::ubuntu':
-    release => $release,
+    release         => $release,
     package_require => true,
   }
 
