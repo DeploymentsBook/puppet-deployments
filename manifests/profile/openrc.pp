@@ -6,8 +6,8 @@ define deployments::profile::openrc(
 ) {
   file { $path:
     owner   => 'root',
-    group   => 'root',
-    mode    => '0700',
+    group   => 'sudo',
+    mode    => '0660',
     content => template("${module_name}/openrc.erb")
   }
 }
