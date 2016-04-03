@@ -21,6 +21,18 @@ class deployments::profile::neutron(
     refreshonly => true,
   }
 
+  $dnsmasq_conf_content = hiera('dnsmasq_conf_contents',undef)
+  if $dnsmasq_conf_content != undef {
+    file { '/etc/neutron/dnsmasq.conf':
+      owner   => 'root',
+      group   => 'neutron',
+      mode    => '0644',
+      content => $dnsmasq_conf_content,
+      notify  => Service['neutron-server'],
+      require => Package['neutron-server'],
+    }
+  }
+
   Neutron::Plugins::Ovs::Bridge<| |> ~> Exec["${extnet_device} up"]
 
   $network_hash = hiera_hash('neutron_network', false)
