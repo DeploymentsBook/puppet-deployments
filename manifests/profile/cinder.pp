@@ -2,6 +2,7 @@ class deployments::profile::cinder
 {
   include ::cinder
   include ::cinder::api
+  include ::cinder::ceilometer
   include ::cinder::config
   include ::cinder::db::mysql
   include ::cinder::keystone::auth

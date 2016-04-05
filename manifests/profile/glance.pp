@@ -7,6 +7,7 @@ class deployments::profile::glance(
   include ::glance::keystone::auth
   include ::glance::backend::file
   include ::glance::db::mysql
+  include ::glance::notify::rabbitmq
 
   glance_image { 'cirros':
     location         => "https://download.cirros-cloud.net/${cirros_version}/cirros-${cirros_version}-x86_64-disk.img",
