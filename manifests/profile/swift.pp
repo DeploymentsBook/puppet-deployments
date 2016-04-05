@@ -31,6 +31,13 @@ class deployments::profile::swift
     require => Package['swift'],
   }
 
+  # XXX might need to enforce some ordering here so that this runs
+  # before services start
+  $loopback_devices = hiera('swift_loopback_devices', {})
+  if ! empty($loopback_devices) {
+    create_resources('swift::storage::loopback', $loopback_devices)
+  }
+
   $object_devices = hiera('swift_ring_object_devices', {})
   if ! empty($object_devices) {
     create_resources('ring_object_device', $object_devices)
