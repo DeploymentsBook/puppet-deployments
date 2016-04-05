@@ -14,6 +14,9 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+sudo rm -f /tmp/tempest/cirros-0.3.4-x86_64-disk.img
+wget http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img -P /tmp/tempest
+
 set +e
 # Select what to test:
 # Smoke suite
@@ -22,13 +25,4 @@ TESTS="smoke"
 # Horizon
 TESTS="${TESTS} dashbboard"
 
-# Ironic
-# Note: running all Ironic tests under SSL is not working
-# https://bugs.launchpad.net/ironic/+bug/1554237
-TESTS="${TESTS} api.baremetal.admin.test_drivers"
-
-cd /tmp/tempest; tox -eall -- --concurrency=2 $TESTS
-RESULT=$?
-set -e
-/tmp/tempest/.tox/all/bin/testr last --subunit > /tmp/tempest/testrepository.subunit
-exit $RESULT
+cd /tmp/tempest; tox -eall -- --concurrency=4 $TESTS

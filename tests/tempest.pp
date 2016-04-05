@@ -45,7 +45,7 @@ class deployments::tests::tempest(
     image_alt_ssh_user     => 'cirros',
     img_file               => 'cirros-0.3.4-x86_64-disk.img',
     compute_build_interval => 10,
-    img_dir                => '/tmp/openstack/tempest',
+    img_dir                => '/tmp/tempest',
   }
 }
 
