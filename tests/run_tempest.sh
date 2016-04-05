@@ -14,6 +14,7 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
+rm -f /tmp/tempest/tempest.log
 sudo rm -f /tmp/tempest/cirros-0.3.4-x86_64-disk.img
 wget http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img -P /tmp/tempest
 

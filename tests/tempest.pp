@@ -9,6 +9,7 @@ class deployments::tests::tempest(
   $keystone_public_endpoint = hiera('keystone::public_endpoint')
 
   include ::openstacklib::openstackclient
+  include ::tempest::config
 
   class { '::tempest':
     debug                  => true,
@@ -18,6 +19,7 @@ class deployments::tests::tempest(
     git_clone              => true,
     tempest_clone_path     => '/tmp/tempest',
     lock_path              => '/tmp/tempest',
+    tempest_config_file    => '/tmp/tempest/etc/tempest.conf',
     configure_images       => true,
     configure_networks     => true,
     identity_uri           => "${keystone_public_endpoint}/v2.0",
@@ -39,8 +41,8 @@ class deployments::tests::tempest(
     swift_available        => true,
     public_network_name    => 'ext-net',
     dashboard_url          => "http://${control_node}",
-    flavor_ref             => '42',
-    flavor_ref_alt         => '84',
+    flavor_ref             => '1',
+    flavor_ref_alt         => '2',
     image_ssh_user         => 'cirros',
     image_alt_ssh_user     => 'cirros',
     img_file               => 'cirros-0.3.4-x86_64-disk.img',
