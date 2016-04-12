@@ -1,11 +1,13 @@
 # Ubuntu Cloud Archive
 class deployments::profile::uca (
-  $release = 'liberty',
+  $release,
+  $repo,
 ) {
   include ::apt
 
   class { '::openstack_extras::repo::debian::ubuntu':
     release         => $release,
+    repo            => $repo,
     package_require => true,
   }
 

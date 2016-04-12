@@ -3,6 +3,7 @@ class deployments::profile::nova
   include ::nova
   include ::nova::api
   include ::nova::db::mysql
+  include ::nova::db::mysql_api
   include ::nova::conductor
   include ::nova::consoleauth
   include ::nova::keystone::auth

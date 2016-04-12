@@ -1,0 +1,10 @@
+description "Setup loopback mounts for Cinder on reboot"
+
+start on mounted MOUNTPOINT=/
+task
+
+script
+    # assume puppet already made the volume file in /var/lib/cinder
+    losetup <%= scope.function_hiera(['cinder::setup_test_volume::loopback_device']) %> <%= scope.function_hiera(['cinder::setup_test_volume::volume_path']) %>/<%= scope.function_hiera(['cinder::setup_test_volume::volume_name']) %>
+end script
+

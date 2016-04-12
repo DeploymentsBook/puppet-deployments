@@ -21,6 +21,13 @@ class deployments::profile::neutron(
     refreshonly => true,
   }
 
+  file { "/etc/network/interfaces.d/${extnet_device}.cfg":
+    content => "auto ${extnet_device}\niface ${extnet_device} inet manual\n",
+    mode    => '0644',
+    owner   => 'root',
+    group   => 'root',
+  }
+
   $dnsmasq_conf_content = hiera('dnsmasq_conf_contents',undef)
   if $dnsmasq_conf_content != undef {
     file { '/etc/neutron/dnsmasq.conf':
