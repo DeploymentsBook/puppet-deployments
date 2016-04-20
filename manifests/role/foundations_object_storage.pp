@@ -1,5 +1,5 @@
 class deployments::role::foundations_object_storage {
-  include deployments::profile::foundations
+  include deployments::role::foundations
   include deployments::profile::swift
 }
 
