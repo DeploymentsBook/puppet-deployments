@@ -1,5 +1,4 @@
 class deployments::role::singlenode {
-  include deployments::role::foundations_bare_metal
   include deployments::role::foundations_block_storage
   include deployments::role::foundations_compute
   include deployments::role::foundations_object_storage
