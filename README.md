@@ -32,3 +32,7 @@ Administrators and Engineers" at http://deploymentsbook.com/
  The solution to this is to ensure that sudo works without warnings or errors.
  This specific issue shown in the logs simply requires a hosts entry for the node in
  /etc/hosts.
+ 
+ * If running in an OpenStack VM (not-recommended) and using a floating-up, 
+ swift-proxy and nova-novncserver will both fail to run because they will be unable
+ to assign the floating IP upon start-up.
