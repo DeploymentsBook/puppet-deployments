@@ -6,7 +6,6 @@ class deployments::profile::ceilometer
   include ::ceilometer::agent::auth
   include ::ceilometer::agent::central
   include ::ceilometer::agent::notification
-  include ::ceilometer::alarm::notifier
   include ::ceilometer::api
   include ::ceilometer::config
   include ::ceilometer::db
