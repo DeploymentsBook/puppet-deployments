@@ -11,6 +11,10 @@ class deployments::tests::tempest(
   include ::openstacklib::openstackclient
   include ::tempest::config
 
+  package { 'python-pip': 
+    ensure => present,
+  }
+
   class { '::tempest':
     debug                  => true,
     use_stderr             => false,
