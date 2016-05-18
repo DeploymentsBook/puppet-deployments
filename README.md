@@ -36,3 +36,8 @@ Administrators and Engineers" at http://deploymentsbook.com/
  * If running in an OpenStack VM (not-recommended) and using a floating-up, 
  swift-proxy and nova-novncserver will both fail to run because they will be unable
  to assign the floating IP upon start-up.
+
+ * The eth1 interface on your controller node does not have an address, but must be in
+ the UP state for floating IP assignment to work. The Puppet configuration sets it
+ to up and Upstart brings it up when you boot up, but if you ever find it DOWN
+ run: ip link set dev eth1 up
