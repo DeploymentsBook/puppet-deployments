@@ -1,5 +1,7 @@
 class deployments::profile::neutron(
-  $extnet_device = 'eth1',
+  $extnet_device  = hiera('extnet_device', 'eth1')
+  bridge_uplinks  = hiera('bridge_uplinks'),
+  bridge_mappings = hiera('bridge_mappings'),
 )
 {
   include ::neutron
@@ -60,5 +62,10 @@ class deployments::profile::neutron(
   $router_interface_hash = hiera_hash('neutron_router_interface', false)
   if $router_interface_hash {
     create_resources('neutron_router_interface', $router_interface_hash)
+  }
+
+  class { '::neutron::agents::ml2::ovs':
+    bridge_mappings => $bridge_mappings,
+    bridge_uplinks   => $bridge_uplinks,
   }
 }
