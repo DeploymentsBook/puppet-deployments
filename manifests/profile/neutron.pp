@@ -1,7 +1,7 @@
 class deployments::profile::neutron(
-  $extnet_device  = hiera('extnet_device', 'eth1')
-  bridge_uplinks  = hiera('bridge_uplinks'),
-  bridge_mappings = hiera('bridge_mappings'),
+  $extnet_device  = hiera('extnet_device', 'eth1'),
+  $bridge_uplinks  = hiera('bridge_uplinks'),
+  $bridge_mappings = hiera('bridge_mappings'),
 )
 {
   include ::neutron
