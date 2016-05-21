@@ -65,6 +65,6 @@ class deployments::profile::neutron(
 
   class { '::neutron::agents::ml2::ovs':
     bridge_mappings => $bridge_mappings,
-    bridge_uplinks   => $bridge_uplinks,
+    bridge_uplinks  => $bridge_uplinks,
   }
 }
