@@ -48,8 +48,11 @@ Administrators and Engineers" at http://deploymentsbook.com/
  will not succeed and will end with:
 
    Error: Could not find a suitable provider for rabbitmq_plugin
+   
    Error: Could not find a suitable provider for mysql_user
+   
    Error: Could not find a suitable provider for vs_bridge
+   
    ...
 
  The only solution for this is to wait until the rabbitmq.com comes back on line
