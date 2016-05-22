@@ -41,3 +41,16 @@ Administrators and Engineers" at http://deploymentsbook.com/
  the UP state for floating IP assignment to work. The Puppet configuration sets it
  to up and Upstart brings it up when you boot up, but if you ever find it DOWN
  run: ip link set dev eth1 up
+
+ * We depend upon the Ubuntu/Debian repositories hosted by rabbitmq.com for the
+ installation of the RabbitMQ message queuing service. If their website is down, as
+ some of our reviewers have encountered, your controller installation using Puppet
+ will not succeed and will end with:
+
+   Error: Could not find a suitable provider for rabbitmq_plugin
+   Error: Could not find a suitable provider for mysql_user
+   Error: Could not find a suitable provider for vs_bridge
+   ...
+
+ The only solution for this is to wait until the rabbitmq.com comes back on line
+ and try running puppet apply again.
